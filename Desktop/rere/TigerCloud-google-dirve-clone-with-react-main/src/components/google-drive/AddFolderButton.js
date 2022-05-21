@@ -49,7 +49,7 @@ export default function AddFolderButton({ currentFolder }) {
         <Form onSubmit={handleSubmit}>
           <Modal.Body>
             <Form.Group>
-              <Form.Label>Folder Name</Form.Label>
+              <Form.Label>Nom de dossier</Form.Label>
               <Form.Control
                 type="text"
                 required
@@ -60,10 +60,10 @@ export default function AddFolderButton({ currentFolder }) {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={closeModal}>
-              Close
+              fermer
             </Button>
             <Button variant="success" type="submit">
-              Add Folder
+              Ajouter le dossier
             </Button>
           </Modal.Footer>
         </Form>

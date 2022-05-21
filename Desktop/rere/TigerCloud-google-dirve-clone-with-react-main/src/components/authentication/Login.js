@@ -21,7 +21,7 @@ export default function Login() {
       await login(emailRef.current.value, passwordRef.current.value)
       history.push("/")
     } catch {
-      setError("Failed to log in")
+      setError("Échec de connexion meri de verifier votre adresse email et votre mot de passe")
     }
 
     setLoading(false)
@@ -31,7 +31,7 @@ export default function Login() {
     <CenteredContainer>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
+          <h2 className="text-center mb-4">Connexion</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -39,20 +39,20 @@ export default function Login() {
               <Form.Control type="email" ref={emailRef} required />
             </Form.Group>
             <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Mot de passe</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
-              Log In
+              Connexion
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">
-            <Link to="/forgot-password">Forgot Password?</Link>
+            <Link to="/forgot-password">Mot de passe oublié?</Link>
           </div>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+        Pas de compte? <Link to="/signup">S'inscrire</Link>
       </div>
     </CenteredContainer>
   )

@@ -3,28 +3,29 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage'
 
+
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyDjPWVE2vknt3Ld1cB_u6eu7VjR9aE3yyw",
-  authDomain: "tiger-cloud-46f97.firebaseapp.com",
-  databaseURL: "https://tiger-cloud-46f97-default-rtdb.firebaseio.com",
-  projectId: "tiger-cloud-46f97",
-  storageBucket: "tiger-cloud-46f97.appspot.com",
-  messagingSenderId: "905774498684",
-  appId: "1:905774498684:web:72b27d7679cb16e7639af9",
-  measurementId: "G-5PWPMW0HC9"
+  apiKey: "AIzaSyCCFCnb6QUts5w5IvXesRPDpDjXIPL7saQ",
+  authDomain: "thetigercloud-95e33.firebaseapp.com",
+  databaseURL: "https://thetigercloud-95e33-default-rtdb.firebaseio.com",
+  projectId: "thetigercloud-95e33",
+  storageBucket: "thetigercloud-95e33.appspot.com",
+  messagingSenderId: "171871673881",
+  appId: "1:171871673881:web:eaa1300dfa16feac355488",
+  measurementId: "G-76TVH8710S"
 })
-// mail: tigercoder12@gmail.com
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAR3EEjem71TWpSLs1V3MR6YIBWm-_7ID4",
-//   authDomain: "tiger-cloud-eca30.firebaseapp.com",
-//   databaseURL: "https://tiger-cloud-eca30-default-rtdb.firebaseio.com",
-//   projectId: "tiger-cloud-eca30",
-//   storageBucket: "tiger-cloud-eca30.appspot.com",
-//   messagingSenderId: "572711175154",
-//   appId: "1:572711175154:web:859d7f699e558453d3a16b",
-//   measurementId: "G-7QT7GFD05R"
-// };
- 
+
+
+// true code 
+// apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+// authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+// databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+// projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+// storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+// messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+// appId: process.env.REACT_APP_FIREBASE_APP_ID,
+
+
 const firestore = app.firestore()
 export const database = {
   folders: firestore.collection("folders"),

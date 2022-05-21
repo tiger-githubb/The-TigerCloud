@@ -1,7 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-TigerDrive est une application web développée avec react et firebase il est une sorte de clone de Google Drive ... vous pouvez stocker vos données telles que des images, des documents, des dossiers ... il est lié à firebase par une api ... les principales fonctionnalités sont : ajouter des fichiers, télécharger des fichiers et supprimer 
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,4 +66,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# TigerDrive-google-dirve-clone-with-react
+# thetigercloud

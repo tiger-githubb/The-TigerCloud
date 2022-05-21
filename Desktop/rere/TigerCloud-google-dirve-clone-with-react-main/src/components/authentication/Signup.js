@@ -4,7 +4,6 @@ import { useAuth } from "../../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import CenteredContainer from "./CenteredContainer"
 
-
 export default function Signup() {
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -18,7 +17,7 @@ export default function Signup() {
     e.preventDefault()
 
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setError("Passwords do not match")
+      return setError("Les mots de passe ne correspondent pas")
     }
 
     try {
@@ -27,7 +26,7 @@ export default function Signup() {
       await signup(emailRef.current.value, passwordRef.current.value)
       history.push("/")
     } catch {
-      setError("Failed to create an account")
+      setError("Échec de la création d'un compte")
     }
 
     setLoading(false)
@@ -37,7 +36,7 @@ export default function Signup() {
     <CenteredContainer>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Sign Up</h2>
+          <h2 className="text-center mb-4">S'inscrire</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -45,21 +44,21 @@ export default function Signup() {
               <Form.Control type="email" ref={emailRef} required />
             </Form.Group>
             <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Mot de passe</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
             <Form.Group id="password-confirm">
-              <Form.Label>Password Confirmation</Form.Label>
+              <Form.Label>Confirmation mot de passe</Form.Label>
               <Form.Control type="password" ref={passwordConfirmRef} required />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
-              Sign Up
+             S'inscrire
             </Button>
           </Form>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Already have an account? <Link to="/login">Log In</Link>
+        Vous avez déjà un compte? <Link to="/login">Connexion</Link>
       </div>
     </CenteredContainer>
   )

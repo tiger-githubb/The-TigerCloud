@@ -4,10 +4,9 @@ import React from "react"
 
 export default function File({ file }) {
   return (
-    // eslint-disable-next-line 
+    // eslint-disable-next-line
     <a
-      href={file.url} 
-      // eslint-disable-next-line
+      href={file.url}
       target="_blank"
       className="btn btn-outline-dark text-truncate w-100"
     >

@@ -16,7 +16,7 @@ export default function UpdateProfile() {
   function handleSubmit(e) {
     e.preventDefault()
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setError("Passwords do not match")
+      return setError("Les mots de passe ne correspondent pas")
     }
 
     const promises = []
@@ -35,7 +35,7 @@ export default function UpdateProfile() {
         history.push("/user")
       })
       .catch(() => {
-        setError("Failed to update account")
+        setError("Échec de la mise à jour du compte")
       })
       .finally(() => {
         setLoading(false)
@@ -46,7 +46,7 @@ export default function UpdateProfile() {
     <CenteredContainer>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
+          <h2 className="text-center mb-4">Mettre à jour le profil</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -59,29 +59,29 @@ export default function UpdateProfile() {
               />
             </Form.Group>
             <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Mot de passe</Form.Label>
               <Form.Control
                 type="password"
                 ref={passwordRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="Laissez vide pour garder la même chose"
               />
             </Form.Group>
             <Form.Group id="password-confirm">
-              <Form.Label>Password Confirmation</Form.Label>
+              <Form.Label>Confirmation mot de passe</Form.Label>
               <Form.Control
                 type="password"
                 ref={passwordConfirmRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="Laissez vide pour garder la même chose"
               />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
-              Update
+              Mise à jour
             </Button>
           </Form>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        <Link to="/user">Cancel</Link>
+        <Link to="/user">Annuler</Link>
       </div>
     </CenteredContainer>
   )

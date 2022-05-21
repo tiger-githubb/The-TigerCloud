@@ -1,17 +1,19 @@
 import React from "react"
 import { Navbar, Nav } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import './thestyle.css'
 
 export default function NavbarComponent() {
   return (
-    <Navbar bg="light" expand="sm">
-      <Navbar.Brand as={Link} to="/">
-        TigerCloud
+    <Navbar  id="thenav">
+      <Navbar.Brand as={Link} to="/" >
+       Tiger Cloud
       </Navbar.Brand>
       <Nav>
         <Nav.Link as={Link} to="/user">
-          Ton Compte
-        </Nav.Link>
+          Mon compte
+      </Nav.Link>
+       
       </Nav>
     </Navbar>
   )
